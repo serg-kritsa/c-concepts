@@ -1,0 +1,46 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: gcc.exe сборка активного файла",
+            "command": "C:\\codeblocks-20.03mingw-nosetup\\MinGW\\bin\\gcc.exe",
+            "args": [
+                "C:\\Users\\user\\Desktop\\cookbooks\\c\\test\\main.c",
+                "C:\\Users\\user\\Desktop\\cookbooks\\c\\test\\other.c",
+                "-o",
+                "C:\\Users\\user\\Desktop\\cookbooks\\c\\test\\main"
+            ],
+            "options": {
+                "cwd": "C:\\codeblocks-20.03mingw-nosetup\\MinGW\\bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "detail": "компилятор: C:\\codeblocks-20.03mingw-nosetup\\MinGW\\bin\\gcc.exe"
+        },
+        {
+            "type": "cppbuild",
+            "label": "C/C++: gcc.exe сборка активного файла ver(1)",
+            "command": "C:\\codeblocks-20.03mingw-nosetup\\MinGW\\bin\\gcc.exe",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "C:\\codeblocks-20.03mingw-nosetup\\MinGW\\bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Задача создана отладчиком."
+        }
+    ]
+}

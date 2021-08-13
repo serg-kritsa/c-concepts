@@ -1,3 +1,6 @@
+// location:   inside a function/block
+// scope:      within the function/block
+// lifetime:   until the function/block completes
 #include <stdio.h>
 
 

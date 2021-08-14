@@ -1,7 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(int argc, char *argv[]) {
+double *multiplyByTwo(double *input) {
+    double *twice = malloc(sizeof(double));
+    *twice = *input * 2.0;
+    return twice;
+}
+
+void writeinheap() {
     int *age = malloc(sizeof(int));
     *age = 30;
     double *salary = malloc(sizeof(double));
@@ -12,13 +18,15 @@ int main(int argc, char *argv[]) {
     myList[2] = 3.4;
 
     double *twiceSalary = multiplyByTwo(salary);
-
     printf(" %.3f from heap \n", *twiceSalary);
 
     free(age);
     free(salary);
     free(myList);
     free(twiceSalary);
-    
+}
+
+int main(int argc, char *argv[]) {
+    writeinheap();
     return 0;
 }

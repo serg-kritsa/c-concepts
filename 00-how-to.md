@@ -40,3 +40,25 @@ gcc -c main.c
 gcc -c other.c
 gcc main.o other.o -o app
 .\app
+
+## build & run & clean
+gcc .\ -o app; .\app.exe; rm .\app.exe
+
+## convert positive decimal to binary
+0       1       0       0       0       0       1       0     <<<   +
+                                                        2^0=1       0   
+                                                2^1=2               2
+                                            2^2=4                   0
+                                    2^3=8                           0
+                            2^4=16                                  0
+                    2^5=32                                          0
+            2^6=64                                                  0
+    2^7=128                                                         128
+                                                                  = 130
+
+
+## convert negative decimal to binary using 2s compliments
+-1 = 1111 1111
+* -5 + 1 = -4
+4 expressed in binary is 0000 0100
+* complimenting the bits produces 1111 1011

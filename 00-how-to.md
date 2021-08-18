@@ -44,6 +44,21 @@ gcc main.o other.o -o app
 ## build & run & clean
 gcc .\ -o app; .\app.exe; rm .\app.exe
 
+## size of pointer in c = 8 bytes
+char *c;
+int *p;
+//declaring array of pointers
+int *ptr[5];
+printf("\n size of p = %d",sizeof(p));  
+printf("\n size of ptr = %d",sizeof(ptr)); 
+printf("\n size of c = %d",sizeof(c)); 
+return 0;
+
+Output :
+size of p = 8
+size of ptr = 40
+size of c = 8
+
 ## convert positive decimal to binary
 0       1       0       0       0       0       1       0     <<<   +
                                                         2^0=1       0   

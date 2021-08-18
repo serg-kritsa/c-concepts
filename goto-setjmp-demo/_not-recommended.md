@@ -1,0 +1,1 @@
+## mainly bad practice except suggested cases

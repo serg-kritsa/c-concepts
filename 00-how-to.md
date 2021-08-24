@@ -77,3 +77,8 @@ size of c = 8
 * -5 + 1 = -4
 4 expressed in binary is 0000 0100
 * complimenting the bits produces 1111 1011
+
+## define a name to the preprocessor
+`#define UNIX`
+`#define UNIX 1`
+`gcc -D UNIX program.c`

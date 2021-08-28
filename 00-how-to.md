@@ -82,3 +82,17 @@ size of c = 8
 `#define UNIX`
 `#define UNIX 1`
 `gcc -D UNIX program.c`
+
+## use static library
+lib-static\lib
+### package static library archive
+gcc -c main.c -o lib_mylib.o
+ar rcs lib_mylib.a lib_mylib.o
+#### show files in static library archive
+ar -t lib_mylib.a
+### run code w/ static library
+lib-static\src
+gcc -c main.c -o main.o -I ../lib
+gcc -o main main.o ..\lib\lib_mylib.a 
+.\main
+

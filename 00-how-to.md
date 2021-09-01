@@ -93,6 +93,27 @@ ar -t lib_mylib.a
 ### run code w/ static library
 lib-static\src
 gcc -c main.c -o main.o -I ../lib
-gcc -o main main.o ..\lib\lib_mylib.a 
-.\main
+gcc -o app main.o ..\lib\lib_mylib.a 
+.\app
 
+## use dynamic library
+### package dynamic library
+lib-dynamic/lib
+gcc -g -fPIC main.c -shared -o lib_mylib.dll
+- g for debugging
+- fPIC for position independent code that required for shared library
+- shared
+- o for result file
+### run code w/ dynamic library in Cygwin terminal
+cd /cygdrive/c/Users/user/Desktop/cookbooks/c/lib-dynamic/src
+gcc -c main.c -o main.o -I ../lib; gcc -o app main.o -L../lib -llib_mylib
+export PATH=/cygdrive/c/Users/user/Desktop/cookbooks/c/lib-dynamic/lib:$PATH
+./main
+
+### package library & run code w/ dynamic library in Linux terminal
+lib-dynamic/lib
+gcc -g -fPIC main.c -shared -o libmylib.so
+lib-dynamic/src
+gcc -c main.c -o main.o -I ../lib; gcc -o app main.o -L../lib -l mylib
+export LD_LIBRARY_PATH=/home/user/lib-dynamic/lib:$LD_LIBRARY_PATH
+./main
